@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+/*
+   CIS 114 CSS Sheet
+   Author: Pearl Zhou
+   Date: Aug 26 2024
+*/
+
+/* Background Styles */
+html { 
+   background: rgb(80,85,104) url(sunset.jpg)
+   center center / cover fixed no-repeat;
+   position: relative;
+}
+
+/* General Styles */
+table, div, footer {
+   background-color: rgba(34,37,52, .3);
+   color: rgba(255, 249, 242, 0.98);
+   text-align: center;
+   width: 40%;
+   margin: auto auto 1em auto;
+   font-family: Georgia, Garamond, "Times New Roman", serif;
+}
+
+
+/* Header Styles */
+header {
+   color: rgba(255, 249, 242, 0.98);
+   text-align: center;
+   width: 40%;
+   margin: auto;
+   font-family: Georgia, Garamond, "Times New Roman", serif;
+}
+
+header > h1 {
+   font-size: 3em;
+   background-color: rgba(34,37,52, .6);
+   padding: 0.5em 0.1em 0.2em 0.1em;
+   margin-bottom: 0;
+   color: rgba(255, 249, 242, 0.98);
+}
+
+header > h2 {
+   font-size: 1.2em;
+   background-color: rgba(34,37,52,0.6);
+   margin-top: 0;
+   padding-bottom: 1em;
+   color: rgba(255, 249, 242, 0.98);
+}
+
+
+/* Divider Styles */
+div > h2 {
+   font-size: 1.4em;
+}
+
+div::after {
+   clear: both;
+   content: "";
+   display: table;
+}
+
+
+/* Return Button Styles */
+div.return {
+   background-color: transparent;
+   margin: 2em auto 2em auto;
+}
+
+div.return > a {
+   padding: 1em 1em 1em 1em;
+   margin: 2em 2em 2em 2em;
+   background-color: rgba(34,37,52,0.8);
+}
+
+
+/* Footer Styles */
+footer > p {
+   font-size: 0.15em;
+   color: rgba(255, 249, 242, 0.7);
+   text-align: center;
+   width: 40%;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+
+/* Link Styles */
+a:link {
+   color: rgba(255, 249, 242, 0.95);
+   text-decoration: none;
+}
+
+a:visited {
+   text-decoration: none;
+   color: rgba(224,174,131,0.95);
+}
+
+a:hover {
+   text-decoration: underline;
+   color: rgb(201,201,201,0.95);
+}
+
+
+/* Table Styles */
+table {
+   border: 10px solid transparent;
+   border-collapse: separate;
+   border-spacing: 0.5em;
+   color: rgba(255, 249, 242, 0.95);
+}
+
+td {
+   border: 10px solid transparent;
+   padding: 0.1em;
+   text-align: center;
+   vertical-align: top;
+}
+
+tr:nth-of-type(even) {
+   background-color: rgba(142,142,142, 0.6);
+}
+
+tr:nth-of-type(odd) {
+   background-color: rgba(67,78,97, 0.6);
+}
+
+thead {
+   background-color: rgba(242,186,148, .6);
+}
+
+th {
+   padding: 1em;
+   font-size: 1.1em;
+   background-color: rgba(242,186,148, .5);
+}
