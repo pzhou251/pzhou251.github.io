@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--
+      CIS 114 HW 2 Part 2
+      Author: Pearl Zhou
+      Date: Sept 9 2024
+   -->
+   
+   <meta charset="utf-8">
+   <meta name="description" content="forms and calculations for JavaScript course">
+   <meta name="author" content="Pearl Zhou">
+   <title>HW 2 Part 2 Form</title>
+   <link href="114_base.css" rel="stylesheet">
+   <script src="114_hw2_p2.js" async></script>
+</head>
+
+<body>
+   <nav>
+      <ul>
+         <li><a href="hw2.html">HW 2 Main Page</a></li>
+         <li><a href="hw2-p1.html">HW 2 Part 1</a></li>
+         <li><a href="hw2-p2.html">HW 2 Part 2</a></li>
+      </ul>
+   </nav>
+
+   <br>
+   <br>
+
+   
+   <div class="form">
+      <h2>Homework 2 Part 2</h2>
+
+      <form name="intForm">
+      <fieldset>
+         <p>
+            Enter three integers to be used for various calculations.
+         </p>
+
+         <br>
+
+         <label for="int1">First Integer:</label>
+         <input id="int1" name="integer1" type="text">
+
+         <br>
+         <br>
+         
+         <label for="int2">Second Integer:</label>
+         <input id="int2" name="integer2" type="text">
+
+         <br>
+         <br>
+         
+         <label for="int3">Third Integer:</label>
+         <input id="int3" name="integer3" type="text">
+
+         <br>
+         <br>
+         
+         <input type="button" value="Submit" id="submit" onclick="formCalcs()">
+         <input type="reset" value="Clear" id="clear" onclick="clearResults()">   
+      </fieldset>
+      </form>
+
+
+      <h3>Results:</h3>
+      <p id="results">
+         Sum:
+         <br>
+         Average:
+         <br>
+         Product:
+         <br>
+         Min:
+         <br>
+         Max:
+      </p>
+   </div>
+
+   <div class="return">
+      <a href="index.html">Return to Assignments Home Page</a>
+   </div>
+
+   <footer>
+      <p>All images are my own.</p>
+   </footer>
+
+   
+
+</body>

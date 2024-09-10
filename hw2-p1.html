@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
    <!--
-      CIS 114 HW 2 Main Page
+      CIS 114 HW 2 Part 1
       Author: Pearl Zhou
       Date: Sept 9 2024
    -->
    
    <meta charset="utf-8">
-   <meta name="description" content="Homework 2 for JavaScript course">
+   <meta name="description" content="basic text styles for JavaScript course">
    <meta name="author" content="Pearl Zhou">
-   <title>HW 2 JavaScript</title>
+   <title>HW 2 Part 1 Styles</title>
    <link href="114_base.css" rel="stylesheet">
 </head>
 
@@ -28,24 +28,12 @@
 
    
    <div>
-      <h2>Homework 2</h2>
-      <p>
-        Welcome to the Main Page of HW 2!
+      <h2>Homework 2 Part 1</h2>
+      <div id="hw2p2">
+         <p id="textStyle">
 
-        <br>
-        <br>
-
-        Homework 2 is divided into two parts:
-
-        <br>
-        <br>
-
-        <a href="hw2-p1.html">Part 1</a> uses JavaScript to display characters in special styles.
-        
-        <br> 
-
-        <a href="hw2-p2.html">Part 2</a> uses JavaScript in a basic form for calculations. 
-      </p>
+         </p>
+      </div>
    </div>
 
    <div class="return">
@@ -55,5 +43,9 @@
    <footer>
       <p>All images are my own.</p>
    </footer>
+
+   <script>
+      document.getElementById("textStyle").innerHTML = "<span style = 'font-family: Times New Roman; color: red; font-weight: bold;'>xy</span> <span style = 'color: blue; font-family: Arial;'>12</span> <span style = 'font-family: Impact; color: green; font-style: italic;'>89</span>";
+   </script>
 
 </body>

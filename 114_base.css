@@ -15,7 +15,8 @@ html {
 
 /* General Styles */
 table, div, footer {
-   background-color: rgba(34,37,52, .3);
+   clear: both;
+   background-color: rgba(34,37,52, .7);
    color: rgba(255, 249, 242, 0.98);
    text-align: center;
    width: 40%;
@@ -49,9 +50,33 @@ header > h2 {
    color: rgba(255, 249, 242, 0.98);
 }
 
+/* Navigation Bar Styles */
+
+nav {
+   color: rgba(255, 249, 242, 0.98);
+   margin: auto;
+   width: 40%;
+   text-alight: center;
+}
+
+nav ul li {
+   font-family: Georgia, Garamond, "Times New Roman", serif;
+   font-size: 1.4em;
+   line-height: 0.8em;
+   margin-right: 0.1em;
+   padding: 0.4em 0.4em 0.4em 0.4em;
+
+   background-color: rgba(34,37,52, .7);
+   color: rgba(255, 249, 242, 0.95);
+   float: left;
+   list-style-type: none;
+}
+
+
 
 /* Divider Styles */
 div > h2 {
+   padding-top: 0.4em;
    font-size: 1.4em;
 }
 
@@ -59,6 +84,11 @@ div::after {
    clear: both;
    content: "";
    display: table;
+}
+
+div#hw2p2 {
+   background-color: white;
+   padding: 0.5em;
 }
 
 
@@ -87,14 +117,9 @@ footer > p {
 
 
 /* Link Styles */
-a:link {
-   color: rgba(255, 249, 242, 0.95);
+a:link, a:visited {
+   color: rgba(224,174,131, 0.95);
    text-decoration: none;
-}
-
-a:visited {
-   text-decoration: none;
-   color: rgba(224,174,131,0.95);
 }
 
 a:hover {
@@ -105,6 +130,7 @@ a:hover {
 
 /* Table Styles */
 table {
+   clear: both;
    border: 10px solid transparent;
    border-collapse: separate;
    border-spacing: 0.5em;
@@ -135,3 +161,17 @@ th {
    font-size: 1.1em;
    background-color: rgba(242,186,148, .5);
 }
+
+/* Form Styles */
+
+div.form {
+   text-align: left;
+   padding: 0 0.5em 0 0.5em;
+}
+
+p#results {
+   margin: 0 0.4em 0.4em 0.4em;
+   padding: 0.5em 0.5em 0.5em 0.5em;
+   background-color: rgba(67,78,97, 0.6);
+}
+
