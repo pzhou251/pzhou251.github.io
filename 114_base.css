@@ -59,7 +59,7 @@ nav {
    text-align: center;
 }
 
-nav ul li {
+nav > ul > li {
    font-family: Georgia, Garamond, "Times New Roman", serif;
    font-size: 1.4em;
    line-height: 0.8em;
@@ -67,7 +67,7 @@ nav ul li {
    padding: 0.4em 0.4em 0.4em 0.4em;
 
    background-color: rgba(34,37,52, .7);
-   color: rgba(255, 249, 242, 0.95);
+   color: white;
    float: left;
    list-style-type: none;
 }
@@ -118,7 +118,7 @@ footer > p {
 
 /* Link Styles */
 a:link, a:visited {
-   color: rgba(224,174,131, 0.95);
+   color: white;
    text-decoration: none;
 }
 
