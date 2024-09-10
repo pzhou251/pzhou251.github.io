@@ -3,7 +3,7 @@
 /*
    CIS 114 CSS Sheet
    Author: Pearl Zhou
-   Date: Aug 26 2024
+   Date: Sept 9 2024
 */
 
 /* Background Styles */
@@ -86,7 +86,7 @@ div::after {
    display: table;
 }
 
-div#hw2p2 {
+div#hw2p1 {
    background-color: white;
    padding: 0.5em;
 }
