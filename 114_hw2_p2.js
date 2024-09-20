@@ -6,8 +6,11 @@ function formCalcs() {
 	int3 = document.forms["intForm"].elements["integer3"].value;
 
 
-	if(isNaN(int1) || isNaN(int2) || isNaN(int3)){
-		document.getElementById("results").innerHTML = "Please enter integer values in numerical format."
+	if (int1 === "" || int2 === "" || int3 === ""){
+		document.getElementById("results").innerHTML = "Please enter a value for each field."
+	}
+	else if(isNaN(int1) || isNaN(int2) || isNaN(int3)){
+		document.getElementById("results").innerHTML = "Please enter only numeric values."
 	}
 	else {
 		i1 = parseInt(int1);
