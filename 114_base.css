@@ -162,7 +162,7 @@ th {
    background-color: rgba(242,186,148, .5);
 }
 
-table.result input {
+table.result tbody tr td input {
    text-align: right;
 }
 
