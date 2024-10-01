@@ -162,6 +162,10 @@ th {
    background-color: rgba(242,186,148, .5);
 }
 
+table.result input {
+   text-align: right;
+}
+
 /* Form Styles */
 
 div.form {
@@ -174,4 +178,5 @@ p#results {
    padding: 0.5em 0.5em 0.5em 0.5em;
    background-color: rgba(67,78,97, 0.6);
 }
+
 

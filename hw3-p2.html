@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--
+      CIS 114 HW 3 Part 2
+      Author: Pearl Zhou
+      Date: Sept 30 2024
+   -->
+   
+   <meta charset="utf-8">
+   <meta name="description" content="sales calculations form for JavaScript course">
+   <meta name="author" content="Pearl Zhou">
+   <title>HW 3 Part 2 Sales</title>
+   <link href="114_base.css" rel="stylesheet">
+   <script src="114_hw3_p2.js" async></script>
+</head>
+
+<body>
+   <nav>
+      <ul>
+         <li><a href="hw3.html">Homework 3 Main Page</a></li>
+         <li><a href="hw3-p1.html">Part 1</a></li>
+         <li><a href="hw3-p2.html">Part 2</a></li>
+      </ul>
+   </nav>
+
+   <br>
+   <br>
+
+   
+   <div class="form">
+      <br>
+      <form name="sellForm">
+      <fieldset>
+
+         <h2>Homework 3 Part 2</h2>
+
+         <label for="name">Seller's Name:</label>
+         <input id="name" name="sellName" type="text">
+
+         <br>
+         <br>
+
+         <p>
+            For each item, type the quantity sold by the seller:
+         </p>
+
+         <br>
+         
+         <label for="i1">Item 1:</label>
+         <input id="i2" name="item1" type="number">
+
+         <br>
+         <br>
+         
+         <label for="i2">Item 2:</label>
+         <input id="i2" name="item2" type="number">
+
+         <br>
+         <br>
+
+         <label for="i3">Item 3:</label>
+         <input id="i3" name="item3" type="number">
+
+         <br>
+         <br>
+
+         <label for="i4">Item 4:</label>
+         <input id="i4" name="item4" type="number">
+
+         <br>
+         <br>
+
+         <input type="button" value="Submit" id="submit" onclick="formCalcs()">
+         <br>
+         <br>
+         <input type="reset" value="Clear Form" id="clear" onclick="clearAll()">   
+
+
+         <br>
+         <br>
+
+         <table class="result">
+         <thead>
+            <tr>
+               <th>Item#</th><th>Price</th><th>Qty Sold</th><th>Total $</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>1</td><td>$20.99</td><td><input id="i1_sold" name="item1_sold" type="number" readonly></td><td><input id="i1_total" name="item1_total" type="number" readonly></td>
+            </tr>
+            <tr>
+               <td>2</td><td>$12.75</td><td><input id="i2_sold" name="item2_sold" type="number" readonly></td><td><input id="i2_total" name="item2_total" type="number" readonly></td>
+            </tr>
+            <tr>
+               <td>3</td><td>$9.95</td><td><input id="i3_sold" name="item3_sold" type="number" readonly></td><td><input id="i3_total" name="item3_total" type="number" readonly></td>
+            </tr>
+            <tr>
+               <td>4</td><td>$35.89</td><td><input id="i4_sold" name="item4_sold" type="number" readonly></td><td><input id="i4_total" name="item4_total" type="number" readonly></td>
+            </tr>
+            <tr>
+               <td colspan=3>Total Amount Sold</td><td><input id="am_total" name="amount_total" type="number" readonly></td>
+            </tr>
+            <tr>
+               <td colspan=3>Total Weekly Earnings</td><td><input id="we_total" name="week_total" type="number" readonly></td>
+            </tr>
+         </tbody>
+      </table>
+      </fieldset>
+      </form>
+
+      <h3>Feedback:</h3>
+      <p id="results">
+         <br>
+         <br>
+         <br>
+      </p>
+
+   </div>
+
+   <div class="return">
+      <a href="index.html">Return to Assignments Home Page</a>
+   </div>
+
+   <footer>
+      <p>All images are my own.</p>
+   </footer>
+
+   
+
+</body>

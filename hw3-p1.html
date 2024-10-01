@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--
+      CIS 114 HW 3 Part 1
+      Author: Pearl Zhou
+      Date: Sept 30 2024
+   -->
+   
+   <meta charset="utf-8">
+   <meta name="description" content="final grade calculation form for JavaScript course">
+   <meta name="author" content="Pearl Zhou">
+   <title>HW 3 Part 1 Final Grades</title>
+   <link href="114_base.css" rel="stylesheet">
+   <script src="114_hw3_p1.js" async></script>
+</head>
+
+<body>
+   <nav>
+      <ul>
+         <li><a href="hw3.html">Homework 3 Main Page</a></li>
+         <li><a href="hw3-p1.html">Part 1</a></li>
+         <li><a href="hw3-p2.html">Part 2</a></li>
+      </ul>
+   </nav>
+
+   <br>
+   <br>
+
+   
+   <div class="form">
+      <h2>Homework 3 Part 2</h2>
+      <br>
+      <h3>Student Grades</h3>
+
+      <form name="gradesForm">
+      <fieldset>
+         <p>
+            Enter a student's scores as integers.
+         </p>
+
+         <br>
+
+         <label for="hw">Homework Average:</label>
+         <br>
+         <input id="hw" name="homework" type="number">
+
+         <br>
+         <br>
+         
+         <label for="mid">Mid-term Exam Score:</label>
+         <br>
+         <input id="mid" name="midterm" type="number">
+
+         <br>
+         <br>
+         
+         <label for="fin">Final Exam Score:</label>
+         <br>
+         <input id="fin" name="final" type="number">
+
+         <br>
+         <br>
+
+         <label for="part">Participation:</label>
+         <br>
+         <input id="part" name="participation" type="number">
+
+         <br>
+         <br>
+         
+         <input type="button" value="Submit" id="submit" onclick="formCalcs()">
+         <input type="reset" value="Clear" id="clear" onclick="clearAll()">   
+      </fieldset>
+      </form>
+
+
+      <h3>Results:</h3>
+      <p id="results">
+         <br>
+         <br>
+         <br>
+      </p>
+   </div>
+
+   <footer>
+      <p>All images are my own.</p>
+   </footer>
+
+ 
+</body>
