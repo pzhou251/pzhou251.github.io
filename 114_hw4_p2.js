@@ -16,7 +16,7 @@ function createInterestTable(rate) {
 			}
 			else if(j===2){ //amount on deposit
 				let amount = interestCalcs(1000, rate, i);
-				amount = amount.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+				amount = amount.toLocaleString("en-US", {style:"currency", currency:"USD"});
 				table = table + amount;
 			}
 			else if(j===3){//interest rate
