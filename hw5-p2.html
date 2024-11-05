@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--
+      CIS 114 HW 5 Part 2
+      Author: Pearl Zhou
+      Date: Nov 4 2024
+   -->
+   
+   <meta charset="utf-8">
+   <meta name="description" content="pulldown menus for JavaScript course">
+   <meta name="author" content="Pearl Zhou">
+   <title>HW 5 Part 2 Pulldown Menus</title>
+   <link href="114_base.css" rel="stylesheet">
+   <script>
+      function linkToNewTab(myForm) {
+         var destination = myForm.socials.options[myForm.socials.selectedIndex].value;
+         if(destination !== "#" ){
+            window.open(destination, "_blank", rel="noreferrer noopener");
+         }
+      }
+   </script>
+</head>
+
+<body>
+   <nav>
+      <ul>
+         <li><a href="hw5.html">Homework 5 Main Page</a></li>
+         <li><a href="hw5-p1.html">Part 1</a></li>
+         <li><a href="hw5-p2.html">Part 2</a></li>
+         <li><a href="hw5-p3.html">Part 3</a></li>
+      </ul>
+   </nav>
+
+   <br>
+   <br>
+
+   
+   <div>
+
+         <h2>HW 5 Part 2 - Pulldown Menus</h2>
+
+         <br>
+
+         <h3>Which social media website do you want to go to?</h3>
+
+         <br>
+
+         <div class="form">
+            
+            <form>
+            <fieldset>
+               <br>
+               
+               
+               Choosing an option will cause the site to open in a new tab.
+               <br>
+               <br>
+               <select name="socials" onchange="linkToNewTab(this.form)">
+                  <option value="#">Select a Site...</option>
+                  <option value="https://www.instagram.com/">Instagram</option>
+                  <option value="https://www.facebook.com/">Facebook</option>
+                  <option value="https://x.com/?lang=en">X/Twitter</option>
+                  <option value="https://www.youtube.com/">YouTube</option>
+               </select>
+
+               <br>
+               <br>
+            </fieldset>
+            </form>
+
+            <form>
+            <fieldset>
+               <br>
+               Choose an option, then press "Go to Site" to open the site in a new tab.
+               <br>
+               <br>
+               <select name="socials">
+                  <option value="#">Select a Site...</option>
+                  <option value="https://www.instagram.com/">Instagram</option>
+                  <option value="https://www.facebook.com/">Facebook</option>
+                  <option value="https://x.com/?lang=en">X/Twitter</option>
+                  <option value="https://www.youtube.com/">YouTube</option>
+               </select>
+
+               <br>
+               <br>
+               
+               <input type="button" value="Go to Site" id="goto" onclick="linkToNewTab(this.form)">  
+
+               <br>
+               <br>
+            </fieldset>
+            </form>
+         </div>
+
+   </div>
+
+   <br>
+
+   <div class="return">
+      <a href="index.html">Return to Assignments Home Page</a>
+   </div>
+
+   <footer>
+      <p>All images are my own.</p>
+   </footer>
+
+   
+
+</body>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--
+      CIS 114 HW 5 Part 1
+      Author: Pearl Zhou
+      Date: Nov 4 2024
+   -->
+   
+   <meta charset="utf-8">
+   <meta name="description" content="forms radio buttons checkboxes Javascript course">
+   <meta name="author" content="Pearl Zhou">
+   <title>HW 5 Part 1 Form Validation</title>
+   <link href="114_base.css" rel="stylesheet">
+   <script src="114_hw5_p1.js" async></script>
+</head>
+
+<body>
+   <nav>
+      <ul>
+         <li><a href="hw5.html">Homework 5 Main Page</a></li>
+         <li><a href="hw5-p1.html">Part 1</a></li>
+         <li><a href="hw5-p2.html">Part 2</a></li>
+         <li><a href="hw5-p3.html">Part 3</a></li>
+      </ul>
+   </nav>
+
+   <br>
+   <br>
+
+   
+   <div class="form">
+      <h2>Homework 5 Part 1 - Form Validation</h2>
+
+      <form>
+      <fieldset>
+         <br>
+
+         <label for="username">Name:</label>
+         <br>
+         <input id="username" name="username" type="text">
+
+         <br>
+         <br>
+
+         Choose your age group:
+         <br>
+         <input name="age" id="less21" value="less21" type="radio" />
+         <label for="less21">Less than 21</label>
+         <br>
+         <input name="age" id="21to50" value="21to50" type="radio" />
+         <label for="21to50">Between 21 and 50</label>
+         <br>
+         <input name="age" id="older50" value="21to50" type="radio" />
+         <label for="older50">Older than 50</label>
+
+         <br>
+         <br>
+
+         Which browsers have you used?
+         <br>
+         <input  name="browser" id="firefox" value="firefox" type="checkbox" />
+         <label for="firefox">Firefox</label>
+         <br>
+         <input  name="browser" id="edge" value="edge" type="checkbox" />
+         <label for="edge">Edge</label>
+         <br>
+         <input  name="browser" id="chrome" value="chrome" type="checkbox" />
+         <label for="chrome">Chrome</label>
+         <br>
+         <input  name="browser" id="safari" value="safari" type="checkbox" />
+         <label for="safari">Safari</label>
+
+         <br>
+         <br>
+         
+         Which movie genre do you prefer?
+         <br>
+         <select name="movies" id="movies">
+            <option value="n/a">Select a Genre...</option>
+            <option value="action">Action</option>
+            <option value="comedy">Comedy</option>
+            <option value="drama">Drama</option>
+            <option value="documentary">Documentary</option>
+            <option value="scifi">Science Fiction</option>
+         </select>
+
+
+         <br>
+         <br>
+         
+         <input type="button" value="Submit" id="submit" onclick="validateForm(this.form)">
+         <input type="reset" value="Clear" id="clear" onclick="clearAll()">   
+
+         <br>
+         <br>
+      </fieldset>
+      </form>
+
+      <h3>Results:</h3>
+      <p id="results">
+         <br>
+         <br>
+         <br>
+      </p>
+   </div>
+
+
+   <div class="return">
+      <a href="index.html">Return to Assignments Home Page</a>
+   </div>
+
+
+   <footer>
+      <p>All images are my own.</p>
+   </footer>
+
+ 
+</body>

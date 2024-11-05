@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--
+      CIS 114 HW 5 Part 3
+      Author: Pearl Zhou
+      Date: Nov 4 2024
+   -->
+   
+   <meta charset="utf-8">
+   <meta name="description" content="2d array query Javascript course">
+   <meta name="author" content="Pearl Zhou">
+   <title>HW 5 Part 3 State DB</title>
+   <link href="114_base.css" rel="stylesheet">
+   <script src="114_hw5_p3.js" async></script>
+</head>
+
+<body>
+   <nav>
+      <ul>
+         <li><a href="hw5.html">Homework 5 Main Page</a></li>
+         <li><a href="hw5-p1.html">Part 1</a></li>
+         <li><a href="hw5-p2.html">Part 2</a></li>
+         <li><a href="hw5-p3.html">Part 3</a></li>
+      </ul>
+   </nav>
+
+   <br>
+   <br>
+
+   
+   <div class="form">
+      <h2>Homework 5 Part 3 - State Database Query</h2>
+
+      <form>
+      <fieldset>
+         <br>
+
+         <label for="stateQuery">Enter full name or 2-letter abbreviation of a state:</label>
+         <br>
+         <input id="stateQuery" name="stateQuery" type="text">
+
+         <br>
+         <br>
+         
+         <input type="button" value="Get State Info" id="submit" onclick="queryDB(this.form)">
+         <input type="reset" value="Clear" id="clear" onclick="clearAll()">   
+
+         <br>
+         <br>
+
+         <h3>State Information:</h3>
+         <p id="results">
+            <br>
+            <br>
+            <br>
+         </p>
+
+      </fieldset>
+      </form>
+
+      
+   </div>
+
+
+   <div class="return">
+      <a href="index.html">Return to Assignments Home Page</a>
+   </div>
+
+
+   <footer>
+      <p>All images are my own.</p>
+   </footer>
+
+ 
+</body>
