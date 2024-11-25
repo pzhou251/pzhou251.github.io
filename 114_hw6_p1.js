@@ -42,9 +42,9 @@ function validateForm(myForm) {
 			thousandth = Math.floor(inputNum * 1000 + .5 ) / 1000;
 			resultString = "Original number: " + inputNum + "<br>Nearest Integer: " + nearInt + "<br>\
 			Square Root as Integer: " + root + "<br>\
-			Rounded Tenth Place: " + tenth + "<br>\
-			Rounded Hundredth Place: " + hundredth + "<br>\
-			Rounded Thousandth Place: " + thousandth;
+			Rounded Tenth Place: " + tenth.toFixed(1) + "<br>\
+			Rounded Hundredth Place: " + hundredth.toFixed(2) + "<br>\
+			Rounded Thousandth Place: " + thousandth.toFixed(3);
 			document.getElementById("results").innerHTML = resultString;
 			document.getElementById("results").style.color = "white";
 
