@@ -1,5 +1,5 @@
 function searchChar(myForm) {   
-	let inputText, inputChar;
+	let inputText, inputChar, inCharLow;
 	let charFound = false;
 	let charNum = 0;
 	let resultString = "";
@@ -10,11 +10,14 @@ function searchChar(myForm) {
 	inputText = myForm.content.value.trim(); //remove whitespace
 	inputChar = myForm.character.value;
 	if(inputText != "" && inputChar != ""){
+		//make both lowercase
+		inputText = inputText.toLowerCase();
+		inCharLow = inputChar.toLowerCase();
 		//search for character
-		if(inputText.indexOf(inputChar) != -1){ 
+		if(inputText.indexOf(inCharLow) != -1){ 
 			//character is in string, start counting
 			for(i = 0; i < inputText.length; ++i){
-				if(inputText[i] === inputChar){
+				if(inputText[i] === inCharLow){
 					charNum += 1;
 				}
 			}
