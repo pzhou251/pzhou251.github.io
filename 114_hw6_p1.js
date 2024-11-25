@@ -17,6 +17,10 @@ function validateForm(myForm) {
 		document.getElementById("results").innerHTML = "Error: Please enter only numbers."
 		document.getElementById("results").style.color = "red";
 	}
+	else if(inputNum.indexOf(".") == -1){
+		document.getElementById("results").innerHTML = "Error: Number must have a decimal point with 4 decimal places."
+		document.getElementById("results").style.color = "red";
+	}
 	else {
 		decimal = inputNum.split(".")[1];
 		if(decimal.length < 4){ //not at least 4 decimal places
@@ -26,13 +30,26 @@ function validateForm(myForm) {
 		else {
 			inputNum = parseFloat(inputNum);
 			nearInt = Math.round(inputNum);
-			root = Math.round(Math.sqrt(inputNum));
+			if(inputNum < 0){
+				root = "Cannot take square root of negative number.";
+			}
+			else{
+				root = Math.round(Math.sqrt(inputNum));
+			}
+			
 			tenth = Math.floor(inputNum * 10 + .5 ) / 10;
 			hundredth = Math.floor(inputNum * 100 + .5 ) / 100;
 			thousandth = Math.floor(inputNum * 1000 + .5 ) / 1000;
-			resultString = "Original number: " + inputNum + "<br>Nearest Integer: " + nearInt;
+			resultString = "Original number: " + inputNum + "<br>Nearest Integer: " + nearInt + "<br>\
+			Square Root as Integer: " + root + "<br>\
+			Rounded Tenth Place: " + tenth + "<br>\
+			Rounded Hundredth Place: " + hundredth + "<br>\
+			Rounded Thousandth Place: " + thousandth;
+			document.getElementById("results").innerHTML = resultString;
+			document.getElementById("results").style.color = "white";
 
 		}
+	}
 }
 
 function clearAll() {
