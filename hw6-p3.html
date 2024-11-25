@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--
+      CIS 114 HW 6 Part 3
+      Author: Pearl Zhou
+      Date: Nov 24 2024
+   -->
+   
+   <meta charset="utf-8">
+   <meta name="description" content="phone number regex pattern Javascript course">
+   <meta name="author" content="Pearl Zhou">
+   <title>HW 6 Part 3 Regex</title>
+   <link href="114_base.css" rel="stylesheet">
+   <script async>
+      function checkPhone(myForm) {   
+         let userInput;
+         let resultString = "";
+         var regExp = /^\(\d{3}\) \d{3}-\d{4}$/;
+         //string starts with a left parentheses, then 3 digits, then a right parentheses. this is followed by a space, then 3 digits, hyphen. the string must end with 4 digits and no other characters.
+         //matches this format: (999) 999-9999
+         var regExpNoSpace = /^\(\d{3}\)\d{3}-\d{4}$/;
+         //common error, phone number entered without a space after the area code
+         //matches this format: (999)999-9999
+         userInput = myForm.phone.value;
+
+         if (regExp.test(userInput)){
+            //phone number has the expected format
+            
+            resultString = "Thank you for entering your phone number!<br>You will be contacted by an agent in the near future.";
+            document.getElementById("results").innerHTML = resultString;
+            document.getElementById("results").style.color = "white";
+            
+         }
+          else {
+            //phone number has incorrect format
+            resultString = "Error: Your phone number must be entered in this format:<br>(XXX) XXX-XXXX<br>An example would be (123) 456-7890";
+            if(regExpNoSpace.test(userInput)){
+               resultString = resultString.concat("<br><br>Did you forget the space after the area code?");
+               console.log("resultString");
+            }
+            document.getElementById("results").innerHTML = resultString;
+            document.getElementById("results").style.color = "red";
+         }
+
+      }
+
+
+function clearAll() {
+   document.getElementById("results").innerHTML = "";
+   document.getElementById("results").style.color = "white";
+
+}
+
+   </script>
+</head>
+
+<body>
+   <nav>
+      <ul>
+         <li><a href="hw6.html">Homework 6 Main Page</a></li>
+         <li><a href="hw6-p1.html">Part 1</a></li>
+         <li><a href="hw6-p2.html">Part 2</a></li>
+         <li><a href="hw6-p3.html">Part 3</a></li>
+      </ul>
+   </nav>
+
+   <br>
+   <br>
+
+   
+   <div class="form">
+      <h2>Homework 6 Part 3 - Regex Pattern Matching</h2>
+
+      <form>
+      <fieldset>
+         <br>
+         <label for="phone">Enter your telephone number in this format:<br>
+         (XXX) XXX-XXXX</label>
+         <br>
+         <input id="phone" name="phonenum" type="text">
+
+         <br>
+         <br>
+         
+         <input type="button" value="Submit" id="submit" onclick="checkPhone(this.form)">
+         <input type="reset" value="Clear" id="clear" onclick="clearAll()">   
+
+         <br>
+         <br>
+
+         <h3>Result:</h3>
+         <p id="results">
+            <br>
+            <br>
+            <br>
+         </p>
+
+      </fieldset>
+      </form>
+
+      
+   </div>
+
+
+   <div class="return">
+      <a href="index.html">Return to Assignments Home Page</a>
+   </div>
+
+
+   <footer>
+      <p>All images are my own.</p>
+   </footer>
+
+ 
+</body>

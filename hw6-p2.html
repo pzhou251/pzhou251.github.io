@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!--
+      CIS 114 HW 6 Part 2
+      Author: Pearl Zhou
+      Date: Nov 24 2024
+   -->
+   
+   <meta charset="utf-8">
+   <meta name="description" content="string search window open for JavaScript course">
+   <meta name="author" content="Pearl Zhou">
+   <title>HW 6 Part 2 Strings and Windows</title>
+   <link href="114_base.css" rel="stylesheet">
+   <script async src="114_hw6_p2.js"></script>
+</head>
+
+<body>
+   <nav>
+      <ul>
+         <li><a href="hw6.html">Homework 6 Main Page</a></li>
+         <li><a href="hw6-p1.html">Part 1</a></li>
+         <li><a href="hw6-p2.html">Part 2</a></li>
+         <li><a href="hw6-p3.html">Part 3</a></li>
+      </ul>
+   </nav>
+
+   <br>
+   <br>
+
+   
+   <div class="form">
+
+         <h2>HW 6 Part 2 - String Search and Windows</h2>
+
+         <br>
+            
+            <form>
+            <fieldset>
+               <br>
+               <label for="content">Enter text to search in:</label><br>
+               <textarea id="content" name="content" rows="4" cols="50"></textarea>
+               <br>
+               <label for="character">Enter the character to search for:</label>
+               <br>
+               <input id="character" name="character" type="text" maxlength="1">
+
+               <br>
+               <br>
+               
+               <input type="button" value="Submit" id="submit" onclick="searchChar(this.form)">
+               <input type="reset" value="Clear" id="clear" onclick="clearAll()">   
+
+               <br>
+               <br>
+
+               <h3>Result:</h3>
+               <p id="results">
+                  <br>
+                  <br>
+                  <br>
+               </p>
+
+            </fieldset>
+            </form>
+
+   </div>
+
+   <br>
+
+   <div class="return">
+      <a href="index.html">Return to Assignments Home Page</a>
+   </div>
+
+   <footer>
+      <p>All images are my own.</p>
+   </footer>
+
+   
+
+</body>
