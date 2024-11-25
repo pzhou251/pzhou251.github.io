@@ -18,7 +18,7 @@ function searchChar(myForm) {
 					charNum += 1;
 				}
 			}
-			document.getElementById("results").innerHTML = "Character found.<br>The character appears " + charNum + " time(s) in the text.";
+			document.getElementById("results").innerHTML = "Character found.<br>" + inputChar + " appears " + charNum + " time(s) in the text.";
 		}
 		else { //character not in string
 			//clear result
