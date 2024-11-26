@@ -3,7 +3,6 @@ function createCookie() {
   var nameKey = "name";   
   var userVal = document.getElementById("user").value;
   var userKey = "username";
-  var all = nameKey + "=" + nameVal + ";path=/;" + userKey + "=" + userVal + ";path=/;";
   document.cookie = nameKey + "=" + nameVal + ";path=/;" + userKey + "=" + userVal + ";path=/;";
   document.getElementById("results").innerHTML="cookies saved!";
 }
