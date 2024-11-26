@@ -1,11 +1,11 @@
 function createCookie() {
-  var cookieVal = document.getElementById("name").value;
-  var cookieKey = "name";   
-  document.cookie = cookieKey + "=" + cookieVal + ";path=/";
-
-  cookieVal = document.getElementById("name").value;
-  cookieKey = "username";   
-  document.cookie = cookieKey + "=" + cookieVal + ";path=/";
+  var nameVal = document.getElementById("name").value;
+  var nameKey = "name";   
+  var userVal = document.getElementById("user").value;
+  var userKey = "username";
+  var all = nameKey + "=" + nameVal + ";path=/;" + userKey + "=" + userVal + ";path=/;";
+  document.cookie = nameKey + "=" + nameVal + ";path=/;" + userKey + "=" + userVal + ";path=/;";
+  document.getElementById("results").innerHTML="cookies saved!";
 }
 
 
@@ -32,7 +32,6 @@ function checkCookie() {
    document.getElementById("firstForm").style.display = "none";
   } else {
     document.getElementById("firstForm").style.display = "block";
-    document.getElementById("results").style.display ="none";
     }
  }
 
