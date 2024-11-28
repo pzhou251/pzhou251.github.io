@@ -5,6 +5,7 @@ function createCookie() {
   var userKey = "username";
   document.cookie = nameKey + "=" + nameVal + ";path=/;" + userKey + "=" + userVal + ";path=/;";
   document.getElementById("results").innerHTML="cookies saved!";
+  console.log(document.cookie);
 }
 
 
