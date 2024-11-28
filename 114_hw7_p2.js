@@ -3,11 +3,10 @@ function createCookie() {
   var nameKey = "name";   
   var userVal = document.getElementById("user").value;
   var userKey = "username";
-  document.cookie = nameKey + "=" + nameVal + ";path=/;" + userKey + "=" + userVal + ";path=/;";
+  document.cookie = nameKey + "=" + nameVal + ";path=/;";
+  document.cookie = userKey + "=" + userVal + ";path=/;";
   document.getElementById("results").innerHTML="cookies saved!";
-  console.log(document.cookie);
-  console.log("hi");
-  document.cookie += "test" + "=" + "what" + ";path=/;";
+  
 }
 
 
