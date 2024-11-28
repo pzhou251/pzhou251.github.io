@@ -6,6 +6,8 @@ function createCookie() {
   document.cookie = nameKey + "=" + nameVal + ";path=/;" + userKey + "=" + userVal + ";path=/;";
   document.getElementById("results").innerHTML="cookies saved!";
   console.log(document.cookie);
+  console.log("hi");
+  document.cookie += "test" + "=" + "what" + ";path=/;";
 }
 
 
