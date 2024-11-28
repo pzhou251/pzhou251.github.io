@@ -4,7 +4,7 @@
    <!--
       CIS 114 HW 7 Part 1
       Author: Pearl Zhou
-      Date: Nov 25 2024
+      Date: Nov 28 2024
    -->
    
    <meta charset="utf-8">
@@ -36,7 +36,7 @@
       <fieldset>
          <h3>Change the Styles of the Example Text Below!</h3>
          <br>
-         Choose background color:
+         <label for="bgcolor">Choose background color:</label>
          <br>
          <input name="bgcolor" id="white" value="white" type="radio" onclick="changeBgColor('white')">
          <label for="white">White</label>
@@ -50,7 +50,7 @@
          <br>
          <br>
 
-         Choose text styles:
+         <label for="textstyle">Choose text styles:</label>
          <br>
          <input name="textstyle" id="underline" value="underline" type="checkbox" onclick="changeTextStyle()">
          <label for="underline">Underline</label>
@@ -64,7 +64,7 @@
          <br>
          <br>
          
-         Choose font size:
+         <label for="size">Choose font size:</label>
          <br>
          <select name="size" id="size" onchange="changeSize()">
             <option value="n/a">Select a Size...</option>
