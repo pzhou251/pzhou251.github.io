@@ -53,19 +53,24 @@
 
   <br><br>
   <h2>Explanation of Ajax</h2>
-  <br><br>
-
-  <p>words</p>
+  <p>
+    AJAX retrieves data from the cd_catalog.xml file to construct a table on the webpage without reloading the entire page. When the button, is pressed, the loadDoc() function is called. This function first creates a new XMLHttpRequest object, xhttp. The function myFunction is assigned to be called when the XMLHttpRequest transaction completes successfully (onload). This is the event handler for when the response is loaded. The XMLHttpRequest object is passed to function myFunction, allowing the response to be accessed from its properties. 
+    <br><br>
+    The XMLHttpRequest object initializes a requst using xhttp.open(). The method parameter is "GET", indicating that a resource will be retrieved from the web server. The url parameter is "cd_catalog.xml", the xml file that will be retrieved. 
+    <br><br>
+    The XMLHttpRequest object sends the request using xhttp.send(). The url "cd_catalog.xml" will be searched for in the server-side datastores. The data is returned in the server response.
+    <br><br>
+    If the transaction is successful and data is retrieved, myFunction(this) is executed. First the function retrieves the XML file from the response, storing in the constant xmlDoc. The const x stores an HTMLCollection of elements from the XML file with the CD tag name. This is a collection of all the CDs in the catalog. The table string is initiated in the next line, with the table headers. In the following for loop, the HTMLCollection of CDs is iterated through, adding a new row to the table for each CD. The artist from each CD is retrieved by tag name, then the title. The HTML table syntax is added to the string at appropriate places to build the table row elements. When the table is complete, the HTML element with the id "demo" is set to display the table. Its innerHTML is replaced with the table string, altering the page without reloading it. The table of CDs is displayed on the page underneath the button.
+  </p>
 
   <br><br>
 
   <h2>REST API</h2>
   <p>
-    The paragraphs will be like a REPORT about the API you chose. The report will be read by a group of developers that you would like to convince to use the API. You can even imagine the type of company you are working for and the type of project you are developing to write that convincing report. In that report, you will include information about the following:
-    TIP: YOU SHOULD NOT simply answer the questions below, remember that you are writing a REPORT and this is just a checklist to help you write your report!
-    What type of response file you get (JSON, XML, etc.)?
-    Do you need any type of key to access and use the API?
-    Do the companies need to pay any fee to use the API and if they need, how is that charged?
-    You need also to provide a link to any type of documentation that would help the developer use the API.</p>
+    <h3>Air Quality API</h3>
+    Air Quality API is a meteorological forecast tool that can inform public health outlook for a geographical area. Using current conditions and Copernicus Atmosphere Monitoring Service (CAMS) forecasts, the API provides pollutant and pollen level forecasts for up to 7 days in the future. The pollutants range from toxicants like particulate matter and carbon monoxide, to greenhouse gases like ozone. Specific allergens for various plant types are included as well. Though the data has highest resolution in European regions, since the data sources are European, the data can still be of interest for researchers in the United States. The air quality data can inform analyses of air pollution and health risk, particularly for people with lung conditions or allergies. I propose to use the API for environmental public health research, using the data to predict days and regions with significant risk.
+    <br><br>
+    Air Quality API accepts a geographical coordinate as input, returning a JSON response file. The <a href = "https://open-meteo.com/en/docs/air-quality-api">documentation is available here</a>. Parameters that can be included preferentially include the time interval for weather data, time format, and timezone. The hourly parameter allows the user to enter a specific pollutant to receive an array of its instantaneous values over a period of hours. An API key is not needed, but customers on the commercial plan are provided an API key for additional features. The API Standard commercial use license is $29/month and the API Professional commercial use license is $99/month. The Professional plan comes with 5 million API calls monthly and includes historical and climate data, which could better inform our analyses. However, the API is free for non-commercial use with attribution. This comes with a limit to 10,000 daily requests, but this should be appropriate for our research applications as of now. If we wish to pay in the future, payments can be made over various electronic payment options with a monthly subscription plan.
+    <br><br>
 </body>
 </html>
