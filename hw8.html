@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      CIS 114 HW 8 Main Page
+      Author: Pearl Zhou
+      Date: Dec 16 2024
+   -->
+   
+   <meta charset="utf-8">
+   <meta name="description" content="Homework 8 for JavaScript course">
+   <meta name="author" content="Pearl Zhou, Claudia Ferreira Da Silva">
+   <title>HW 8 AJAX</title>
+   <style>
+      table,th,td {
+        border : 1px solid black;
+        border-collapse: collapse;
+      }
+      th,td {
+        padding: 5px;
+      }
+   </style>
+</head>
+
+<body>
+  <button type="button" onclick="loadDoc()">Get CD collection</button>
+  <br><br>
+  <table id="demo"></table>
+
+  <script>
+  function loadDoc() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+      myFunction(this);
+    }
+    xhttp.open("GET", "cd_catalog.xml");
+    xhttp.send();
+  }
+  function myFunction(xml) {
+    const xmlDoc = xml.responseXML;
+    const x = xmlDoc.getElementsByTagName("CD");
+    let table="<tr><th>Artist</th><th>Title</th></tr>";
+    for (let i = 0; i <x.length; i++) { 
+      table += "<tr><td>" +
+      x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+      "</td><td>" +
+      x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+      "</td></tr>";
+    }
+    document.getElementById("demo").innerHTML = table;
+  }
+  </script>
+
+  <br><br>
+  <h2>Explanation of Ajax</h2>
+  <br><br>
+
+  <p>words</p>
+
+  <br><br>
+
+  <h2>REST API</h2>
+  <p>
+    The paragraphs will be like a REPORT about the API you chose. The report will be read by a group of developers that you would like to convince to use the API. You can even imagine the type of company you are working for and the type of project you are developing to write that convincing report. In that report, you will include information about the following:
+    TIP: YOU SHOULD NOT simply answer the questions below, remember that you are writing a REPORT and this is just a checklist to help you write your report!
+    What type of response file you get (JSON, XML, etc.)?
+    Do you need any type of key to access and use the API?
+    Do the companies need to pay any fee to use the API and if they need, how is that charged?
+    You need also to provide a link to any type of documentation that would help the developer use the API.</p>
+</body>
+</html>
